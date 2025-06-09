@@ -21,6 +21,14 @@
 - note that the new Waveshare Universal e-Paper Raw Panel Driver HAT Rev 2.3 needs PWR connected to VCC or driven HIGH
 - see https://www.waveshare.com/wiki/E-Paper_Driver_HAT
 
+### ESP-IDF Compatibility
+The library can be used directly in ESP-IDF projects.  A minimal
+`CMakeLists.txt` and legacy `component.mk` are provided so the component can be
+added to the project via `idf_component_register`.  Arduino style calls such as
+`digitalWrite`, `delay` or the global `SPI` and `Serial` objects are mapped to
+their ESP-IDF counterparts through the lightweight compatibility layer located
+in the `idf` folder.
+
 ### Paged Drawing, Picture Loop
  - This library uses paged drawing to limit RAM use and cope with missing single pixel update support
  - buffer size can be selected in the application by template parameter page_height, see GxEPD2_Example

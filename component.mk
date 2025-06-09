@@ -1,0 +1,3 @@
+COMPONENT_SRCDIRS := src idf
+COMPONENT_ADD_INCLUDEDIRS := src idf
+COMPONENT_REQUIRES := driver freertos
